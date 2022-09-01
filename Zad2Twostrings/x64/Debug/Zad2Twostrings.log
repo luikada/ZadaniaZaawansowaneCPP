@@ -1,0 +1,3 @@
+﻿  Zad2Twostrings.cpp
+C:\Users\Klaudia\source\repos\ZadaniaZaawansowane1-10\Zad2Twostrings\Zad2Twostrings.cpp(20,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  Zad2Twostrings.vcxproj -> C:\Users\Klaudia\source\repos\ZadaniaZaawansowane1-10\x64\Debug\Zad2Twostrings.exe
