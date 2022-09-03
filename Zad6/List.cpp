@@ -13,11 +13,12 @@ std::list<int> List::createListOfFirstNumbers()
 {
 	for (int x : _oneToThousend)
 	{
-		while (checkIfDividedByMoreThen2N)
+		while (checkIfDividedByMoreThen2N())
 		{
 			_firstNumbers.push_back(x);
 		}
 	}
+	return _firstNumbers;
 }
 
 std::list<int> List::createListOfCompositeNumbers()
