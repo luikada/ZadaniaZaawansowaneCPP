@@ -8,20 +8,23 @@
 //d) void sortAreaDescending() - Posortuj vector prostok¹tów malejaco wed³ug pola powierzchni
 //e) void deleteInvalid() Usuñ wszystkie prostok¹ty, które maj¹ przynajmniej jeden bok równy 0
 
-class Rectangle 
+#pragma once
+#include "RectangleGenerator.h"
+#include <vector>
+
+class RectangleManager
 {
-private: 
-	double _sideA;
-	double _sideB;
-
 public:
-	Rectangle(double a, double b);
-	double getSideA();
-	double getSideB();
-	double Area(); 
-	double Circuit();
-	bool isSquare(); 
+	RectangleManager(int howMany);
+	void printRectangles();
+	size_t countRectangleBiggerThen(int area); 
+	std::vector <Rectangle> copySquares();
+	void sortAreaDescending();
+	void deleteInvalid();
 
 
+	private:
+			std::vector <Rectangle> rectVect;
+		
 };
 

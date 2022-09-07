@@ -1,9 +1,18 @@
 #include "Rectangle.h"
 
-Rectangle::Rectangle(double a, double b) :_sideA(a), _sideB(b)
+Rectangle::Rectangle(double a, double b) : _sideA(a), _sideB(b)
 {
 
 }
+double Rectangle::getSideA()
+{
+	return _sideA;
+}
+double Rectangle::getSideB()
+{
+	return _sideB;
+}
+
 
 double Rectangle::Area()
 {
@@ -17,8 +26,13 @@ double Rectangle::Circuit()
 
 bool Rectangle::isSquare()
 {
-	if (_sideA == _sideB)
+	if (_sideA != _sideB)
 	{
-		return true;
+		return 0;
 	}
+	else
+	{
+		return 1;
+
+	};
 }
