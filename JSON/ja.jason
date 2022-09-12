@@ -1,0 +1,13 @@
+{
+    "imie": "Klaudia",
+    "lista": [
+        1,
+        0,
+        2
+    ],
+    "naziwsko": "Tracz",
+    "praca": {
+        "MotherOfaCat": "fullTime",
+        "bank": "halfDay"
+    }
+}

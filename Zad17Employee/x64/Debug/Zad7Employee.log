@@ -1,0 +1,8 @@
+﻿  Employee.cpp
+  EmployeeManager.cpp
+C:\Users\Klaudia\source\repos\ZadaniaZaawansowane1-10\Zad7Employee\EmployeeManager.h(8,18): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+C:\Users\Klaudia\source\repos\ZadaniaZaawansowane1-10\Zad7Employee\EmployeeManager.h(8,18): warning C4183: EmployeeReader”: Brak typu zwracanego; założono, że jest funkcją składową zwracającą „int”
+C:\Users\Klaudia\source\repos\ZadaniaZaawansowane1-10\Zad7Employee\EmployeeManager.h(9,18): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+C:\Users\Klaudia\source\repos\ZadaniaZaawansowane1-10\Zad7Employee\EmployeeManager.h(9,18): warning C4183: EmployeeWriter”: Brak typu zwracanego; założono, że jest funkcją składową zwracającą „int”
+  Zad7Employee.cpp
+  Generowanie kodu...
