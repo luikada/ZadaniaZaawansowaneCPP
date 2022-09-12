@@ -13,7 +13,7 @@ void RectangleManager::printRectangles()
 {
 	
 	std::for_each(rectVect.begin(), rectVect.end(), [&](Rectangle rect) {
-		std::cout<<"d³ugoœci boków prostok¹ta: " << rect.getSideA() << ", " << rect.getSideB() << std::endl;
+		std::cout<<"d³ugosci bokow prostokata: " << rect.getSideA() << ", " << rect.getSideB() << std::endl;
 		});
 }
 
@@ -23,9 +23,9 @@ size_t RectangleManager::countRectangleBiggerThen(int area)
 	
 	size_t num = std::count_if(rectVect.begin(), rectVect.end(), [&](Rectangle rec)
 	{
-		if (rec.Area() > area)
+		if (rec.getArea() > area)
 			{
-				return rec.Area();
+				return rec.getArea();
 			};
 	});
 
@@ -35,7 +35,7 @@ size_t RectangleManager::countRectangleBiggerThen(int area)
 std::vector<Rectangle> RectangleManager::copySquares()
 {//c) Przekopiuj wszystkie prostk¹ty, które s¹ kwadratami do drugiego vectora(copy_if) i go wypisz(for_each)
 	std::vector<Rectangle>squares;
-	std::copy_if(rectVect.begin(), rectVect.end(), squares.begin(), [&](Rectangle rec)
+	std::copy_if(rectVect.begin(), rectVect.end(), std::back_inserter(squares), [&](Rectangle rec)
 		{return (rec.getSideA() == rec.getSideB());});
 
 	return squares;
@@ -44,7 +44,7 @@ std::vector<Rectangle> RectangleManager::copySquares()
 void RectangleManager::sortAreaDescending()
 {//d) void sortAreaDescending() - Posortuj vector prostok¹tów malejaco wed³ug pola powierzchni
 
-	std::sort(rectVect.begin(), rectVect.end(), [](Rectangle rec, Rectangle tang) {return rec.Area()> tang.Area(); });
+	std::sort(rectVect.begin(), rectVect.end(), [](Rectangle first, Rectangle second) {return first.getArea()> second.getArea(); });
 
 }
 

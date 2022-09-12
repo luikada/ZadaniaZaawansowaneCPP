@@ -8,9 +8,9 @@ int main()
 {
 	Rectangle rectangle(5.5,8.8);
 	 
-	RectangleGenerator genarate (3,100);
+	RectangleGenerator genarate (3,5);
 	Rectangle abc=genarate.createRectangle();
-	std::cout << abc.Area() << std::endl;
+	std::cout << abc.getArea() << std::endl;
 
 	RectangleManager r(5);
 	r.printRectangles();

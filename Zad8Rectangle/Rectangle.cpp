@@ -14,12 +14,12 @@ double Rectangle::getSideB()
 }
 
 
-double Rectangle::Area()
+double Rectangle::getArea()
 {
 	return _sideA*_sideB;
 }
 
-double Rectangle::Circuit()
+double Rectangle::getCircuit()
 {
 	return 2*_sideA + 2*_sideB;
 }

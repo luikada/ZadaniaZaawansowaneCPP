@@ -18,8 +18,8 @@ public:
 	Rectangle(double a, double b);
 	double getSideA();
 	double getSideB();
-	double Area(); 
-	double Circuit();
+	double getArea(); 
+	double getCircuit();
 	bool isSquare(); 
 
 
