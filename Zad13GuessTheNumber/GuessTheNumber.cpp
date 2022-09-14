@@ -1,4 +1,6 @@
 #include "GuessTheNumber.h"
+#include <vector>
+#include <numeric>
 
 GuessTheNumber::GuessTheNumber()
 	: engine(std::random_device()()),
@@ -27,7 +29,7 @@ void GuessTheNumber::print(int num)
 	}
 	else if(num == 3)
 	{
-		std::cout << "szukana liczba jest wieksza podaj nastepna:";
+		std::cout << "szukana liczba jest wieksza podaj nastepna:" << std::endl;;
 	}
 	else if (num == 4)
 	{
@@ -35,7 +37,11 @@ void GuessTheNumber::print(int num)
 	}
 	else if (num == 5)
 	{
-		std::cout << "nieprawidlowa wartosc, sprobuj jeszcze raz " << std::endl << _secretNumber;
+		std::cout << "nieprawidlowa wartosc, sprobuj jeszcze raz " << std::endl;
+	}
+	else if (num ==6)
+	{
+		std::cout << "liczba szukana jest w odleglosci + -3" << std::endl;
 	}
 }
 
@@ -45,17 +51,32 @@ void GuessTheNumber::game()
 {
 	print(1);
 
+
 	do 
 	{
 		int guess = getGuess();
 
 		if (guess > _secretNumber)
 		{
-			print(2);
+			if (checkIfInRange(guess)==0)
+			{
+				print(6);
+			}
+			else
+			{
+				print(2);
+			};
 		}
 		else if (guess < _secretNumber)
 		{
-			print(3);
+			if (checkIfInRange(guess)==0)
+			{
+				print(6);
+			}
+			else
+			{
+				print(3);
+			};
 		}
 		else if(guess=_secretNumber)
 		{
@@ -68,3 +89,13 @@ void GuessTheNumber::game()
 	} while (_secretNumber != _answer);
 
 }
+
+bool GuessTheNumber::checkIfInRange(int num)
+{	
+	int a = _secretNumber + 3;
+	int b = _secretNumber - 3;
+
+	if ((num<_secretNumber && num >=b) || (num > _secretNumber && num <=a))
+		return 0;
+	}
+

@@ -18,6 +18,7 @@ public:
 	int getGuess();
 	void print (int num);
 	void game();
+	bool checkIfInRange(int i);
 	
 
 };
